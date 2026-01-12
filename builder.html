@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Build your professional ATS-friendly resume online with our easy-to-use resume builder tool">
+    <meta name="keywords" content="resume builder, CV builder, online resume maker, PDF resume">
+    <meta name="author" content="Profile+">
+    <title>Resume Builder - Profile+ | Create Your Professional CV</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@800&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</head>
+<body>
+
+<header>
+    <div class="logo-container">
+        <div class="logo-box">
+            <img src="logo.png" alt="Profile+ Logo">
+        </div>
+        <h1 class="site-name">Profile+</h1>
+    </div>
+
+    <nav>
+        <ul>
+            <li><a href="index.html" class="nav-link">Home</a></li>
+            <li><a href="about.html" class="nav-link">About</a></li>
+            <li><a href="templates.html" class="nav-link">Templates</a></li>
+            <li><a href="builder.html" class="nav-link active">Builder</a></li>
+            <li><a href="services.html" class="nav-link">Services</a></li>
+            <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+            <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+
+<section class="content-section">
+    <h2>🛠️ Resume Builder</h2>
+    <p style="text-align: center; margin-bottom: 30px;">Fill in your information below and download your professional resume in PDF format</p>
+
+    <label for="resumeType">Resume Type</label>
+    <select id="resumeType">
+        <option>Student</option>
+        <option>Professional</option>
+        <option>Executive</option>
+    </select>
+
+    <label for="name">Full Name *</label>
+    <input id="name" placeholder="e.g., John Williams" aria-label="Full Name">
+    
+    <label for="title">Job Title *</label>
+    <input id="title" placeholder="e.g., Software Engineer" aria-label="Job Title">
+    
+    <label for="email">Email Address *</label>
+    <input id="email" type="email" placeholder="e.g., john.williams@mail.uk" aria-label="Email Address">
+    
+    <label for="phone">Phone Number</label>
+    <input id="phone" placeholder="e.g., +44 20 7946 0638" aria-label="Phone Number">
+    
+    <label for="address">Address</label>
+    <input id="address" placeholder="Street, City, ZIP Code" aria-label="Address">
+    
+    <label for="linkedin">LinkedIn Profile</label>
+    <input id="linkedin" placeholder="e.g., linkedin.com/in/johnwilliams" aria-label="LinkedIn Profile">
+    
+    <label for="website">Personal Website</label>
+    <input id="website" placeholder="e.g., www.johnwilliams.com" aria-label="Personal Website">
+    
+    <label for="drivingLicense">Driving License</label>
+    <input id="drivingLicense" placeholder="e.g., B, AM, A" aria-label="Driving License">
+    
+    <label for="summary">Professional Summary *</label>
+    <textarea id="summary" placeholder="Write a brief professional summary highlighting your key achievements and career goals..." aria-label="Professional Summary"></textarea>
+    
+    <label for="skills">Skills *</label>
+    <textarea id="skills" placeholder="List your skills separated by commas (e.g., Python, Project Management, Data Analysis)" aria-label="Skills"></textarea>
+    
+    <label for="experience">Work Experience *</label>
+    <textarea id="experience" placeholder="Job Title, Company Name, Location (Start Date - End Date)&#10;- Key responsibility or achievement&#10;- Another achievement with metrics if possible" aria-label="Work Experience"></textarea>
+    
+    <label for="education">Education *</label>
+    <textarea id="education" placeholder="Degree, Institution Name (Graduation Year)&#10;- Relevant coursework or achievements" aria-label="Education"></textarea>
+
+    <button class="btn" onclick="downloadPDF()">📥 Download PDF Resume</button>
+</section>
+
+</main>
+
+<button class="scroll-top" onclick="scrollToTop()" aria-label="Scroll to top">↑</button>
+
+<footer>
+    <p>&copy; 2026 Profile+. All rights reserved. | Empowering job seekers worldwide 🌍</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
