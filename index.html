@@ -4,8 +4,16 @@
     <meta charset="UTF-8">
     <title>Profile+ | Build. Impress. Connect.</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <link href="https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@800&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <meta name="description" content="Profile+ - Create ATS-friendly CVs and resumes with professional templates. Generate and export resumes in PDF format easily.">
+    <meta name="keywords" content="resume builder, CV creator, ATS-friendly resume, professional templates, PDF export">
+    <meta name="author" content="Profile+">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Profile+ | Professional Resume Builder">
+    <meta property="og:description" content="Create ATS-friendly CVs and resumes with professional templates">
+    <meta property="og:type" content="website">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@800&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 
@@ -38,7 +46,7 @@
 <!-- HOME -->
 <section id="home" class="hero">
     <div class="hero-text">
-        <p class="tagline-badge">Build. Impress. Connect.</p>
+        <p class="tagline-badge">✨ Build. Impress. Connect.</p>
         <h2>Welcome to Profile+</h2>
         <p>
             Profile+ is a web-based platform that enables users to generate
@@ -46,27 +54,34 @@
             Users can input personal and career details and export resumes
             in <strong>PDF format</strong> without coding knowledge.
         </p>
-        <a href="#builder" class="btn">Get Started</a>
+        <p>
+            🚀 <strong>Stand out</strong> from the competition with professionally crafted resumes that get you noticed by recruiters and hiring managers.
+        </p>
+        <a href="#portfolio" class="btn">Get Started →</a>
     </div>
 
     <div class="hero-graphic">
-        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f" alt="">
+        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800" alt="Professional workspace with laptop and documents">
     </div>
 </section>
 
 <!-- ABOUT -->
 <section id="about" class="hero">
     <div class="hero-graphic">
-        <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f" alt="">
+        <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=800" alt="Team collaboration">
     </div>
 
     <div class="hero-text">
-        <p class="tagline-badge">Our Mission</p>
+        <p class="tagline-badge">💼 Our Mission</p>
         <h2>About Profile+</h2>
         <p>
             Profile+ focuses on simplifying resume creation for students,
             fresh graduates, and job seekers by ensuring
             <strong>ATS compatibility</strong> and professional formatting.
+        </p>
+        <p>
+            📊 <strong>95% of Fortune 500 companies</strong> use Applicant Tracking Systems (ATS). 
+            Our templates ensure your resume passes these filters and reaches human recruiters.
         </p>
         <p>
             The current version prioritizes CV and resume generation.
@@ -77,64 +92,90 @@
 
 <!-- PORTFOLIO -->
 <section id="portfolio" class="content-section">
-    <h2>Resume Templates</h2>
+    <h2>📄 Resume Templates</h2>
     <div class="templates-grid">
         <div class="card template" onclick="comingSoon()">
-            <h3>Modern Professional</h3>
+            <h3>🎯 Modern Professional</h3>
+            <p>Clean and contemporary design perfect for tech and corporate roles</p>
         </div>
         <div class="card template" onclick="comingSoon()">
-            <h3>Creative Resume</h3>
+            <h3>🎨 Creative Resume</h3>
+            <p>Stand out with unique layouts for creative industries</p>
         </div>
         <div class="card template" onclick="comingSoon()">
-            <h3>Executive CV</h3>
+            <h3>👔 Executive CV</h3>
+            <p>Sophisticated format for senior leadership positions</p>
         </div>
     </div>
 
-    <h2>Resume Builder</h2>
+    <h2 id="builder">🛠️ Resume Builder</h2>
 
-    <label>Resume Type</label>
+    <label for="resumeType">Resume Type</label>
     <select id="resumeType">
         <option>Student</option>
         <option>Professional</option>
         <option>Executive</option>
     </select>
 
-    <input id="name" placeholder="Full Name">
-    <input id="title" placeholder="Job Title">
-    <input id="email" placeholder="Email">
-    <input id="phone" placeholder="Phone Number">
-    <input id="address" placeholder="Address (Street, City, ZIP)">
-    <input id="linkedin" placeholder="LinkedIn Profile URL">
-    <input id="website" placeholder="Personal Website URL">
-    <input id="drivingLicense" placeholder="Driving License (D, DA, B2, B,A)">
-    <textarea id="summary" placeholder="Professional Summary"></textarea>
-    <textarea id="skills" placeholder="Skills (comma separated)"></textarea>
-    <textarea id="experience" placeholder="Work Experience (job, company, dates, responsibilities)"></textarea>
-    <textarea id="education" placeholder="Education (degree, school, dates)"></textarea>
+    <label for="name">Full Name *</label>
+    <input id="name" placeholder="e.g., John Williams" aria-label="Full Name">
+    
+    <label for="title">Job Title *</label>
+    <input id="title" placeholder="e.g., Software Engineer" aria-label="Job Title">
+    
+    <label for="email">Email Address *</label>
+    <input id="email" type="email" placeholder="e.g., john.williams@mail.uk" aria-label="Email Address">
+    
+    <label for="phone">Phone Number</label>
+    <input id="phone" placeholder="e.g., +44 20 7946 0638" aria-label="Phone Number">
+    
+    <label for="address">Address</label>
+    <input id="address" placeholder="Street, City, ZIP Code" aria-label="Address">
+    
+    <label for="linkedin">LinkedIn Profile</label>
+    <input id="linkedin" placeholder="e.g., linkedin.com/in/johnwilliams" aria-label="LinkedIn Profile">
+    
+    <label for="website">Personal Website</label>
+    <input id="website" placeholder="e.g., www.johnwilliams.com" aria-label="Personal Website">
+    
+    <label for="drivingLicense">Driving License</label>
+    <input id="drivingLicense" placeholder="e.g., B, AM, A" aria-label="Driving License">
+    
+    <label for="summary">Professional Summary *</label>
+    <textarea id="summary" placeholder="Write a brief professional summary highlighting your key achievements and career goals..." aria-label="Professional Summary"></textarea>
+    
+    <label for="skills">Skills *</label>
+    <textarea id="skills" placeholder="List your skills separated by commas (e.g., Python, Project Management, Data Analysis)" aria-label="Skills"></textarea>
+    
+    <label for="experience">Work Experience *</label>
+    <textarea id="experience" placeholder="Job Title, Company Name, Location (Start Date - End Date)&#10;- Key responsibility or achievement&#10;- Another achievement with metrics if possible" aria-label="Work Experience"></textarea>
+    
+    <label for="education">Education *</label>
+    <textarea id="education" placeholder="Degree, Institution Name (Graduation Year)&#10;- Relevant coursework or achievements" aria-label="Education"></textarea>
 
-    <button class="btn" onclick="downloadPDF()">Download PDF</button>
+    <button class="btn" onclick="downloadPDF()">📥 Download PDF Resume</button>
 </section>
 
 <!-- SERVICES -->
 <section id="services" class="content-section">
-    <h2>Our Services</h2>
+    <h2>⭐ Our Services</h2>
     <div class="services-grid">
-        <div class="card service-card" onclick="location.href='#portfolio'" style="background-image: url('images/ats_resume.jpg');">
+        <div class="card service-card" onclick="location.href='#portfolio'" style="background-image: linear-gradient(135deg, rgba(102, 126, 234, 0.3), rgba(118, 75, 162, 0.3)), url('https://images.unsplash.com/photo-1586281380349-632531db7ed4?w=800');">
             <div class="card-overlay">
-                <h3>ATS-Optimized Resume Templates</h3>
-                <p>Professionally structured layouts readable by ATS systems.</p>
+                <h3>📋 ATS-Optimized Resume Templates</h3>
+                <p>Professionally structured layouts that pass Applicant Tracking Systems and reach recruiters.</p>
             </div>
         </div>
-        <div class="card service-card" onclick="location.href='#portfolio'" style="background-image: url('images/content_guidance.jpg');">
+        <div class="card service-card" onclick="location.href='#portfolio'" style="background-image: linear-gradient(135deg, rgba(102, 126, 234, 0.3), rgba(118, 75, 162, 0.3)), url('https://images.unsplash.com/photo-1455849318743-b2233052fcff?w=800');">
             <div class="card-overlay">
-                <h3>Resume Content Guidance</h3>
-                <p>Helps users write strong summaries, skills, and experience.</p>
+                <h3>✍️ Resume Content Guidance</h3>
+                <p>Expert tips and examples to help you write compelling summaries, skills, and experience sections.</p>
             </div>
         </div>
-        <div class="card service-card" onclick="location.href='#portfolio'" style="background-image: url('images/pdf_export.jpg');">
+        <div class="card service-card" onclick="location.href='#portfolio'" style="background-image: linear-gradient(135deg, rgba(102, 126, 234, 0.3), rgba(118, 75, 162, 0.3)), url('https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=800');">
             <div class="card-overlay">
-                <h3>PDF Resume Export</h3>
-                <p>Instant download in recruiter-ready PDF format.</p>
+                <h3>📄 PDF Resume Export</h3>
+                <p>Instant download in recruiter-ready PDF format, compatible with all devices and platforms.</p>
             </div>
         </div>
     </div>
@@ -142,60 +183,92 @@
 
 <!-- GALLERY -->
 <section id="gallery" class="content-section">
-    <h2>Gallery</h2>
+    <h2>🎨 Gallery</h2>
 
     <table>
-        <tr><th>Template</th><th>ATS Score</th><th>Format</th><th>Example</th></tr>
-        <tr><td>Low-level</td><td>Low</td><td>PDF</td><td><img src="https://cvgenius.com/wp-content/uploads/bad-cv-examples-lies.png"></td></tr>
-        <tr><td>Modern</td><td>High</td><td>PDF</td><td><img src="https://www.visualcv.com/static/51f58bb7e8f19a66a1cb50b15535511b/4a443/denali-cv-template-demo.png"></td></tr>
-        <tr><td>Executive</td><td>High</td><td>PDF</td><td><img src="https://cdn.enhancv.com/images/1098/i/aHR0cHM6Ly9jZG4uZW5oYW5jdi5jb20vcHJlZGVmaW5lZC1leGFtcGxlcy85WnI2cU5iT05uWkFmdmpCZ2prekl1bE1uRmRFcWYzTTU4Q2c1cXhvL2ltYWdlLnBuZw~~.png"></td></tr>
+        <thead>
+            <tr><th>Template</th><th>ATS Score</th><th>Format</th><th>Example</th></tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>Basic</strong></td>
+                <td><span style="color: #e74c3c;">⭐⭐ Low</span></td>
+                <td>PDF</td>
+                <td><img src="https://cvgenius.com/wp-content/uploads/bad-cv-examples-lies.png" alt="Basic template example"></td>
+            </tr>
+            <tr>
+                <td><strong>Modern Professional</strong></td>
+                <td><span style="color: #27ae60;">⭐⭐⭐⭐⭐ High</span></td>
+                <td>PDF</td>
+                <td><img src="https://www.visualcv.com/static/51f58bb7e8f19a66a1cb50b15535511b/4a443/denali-cv-template-demo.png" alt="Modern professional template"></td>
+            </tr>
+            <tr>
+                <td><strong>Executive</strong></td>
+                <td><span style="color: #27ae60;">⭐⭐⭐⭐⭐ High</span></td>
+                <td>PDF</td>
+                <td><img src="https://cdn.enhancv.com/images/1098/i/aHR0cHM6Ly9jZG4uZW5oYW5jdi5jb20vcHJlZGVmaW5lZC1leGFtcGxlcy85WnI2cU5iT05uWkFmdmpCZ2prekl1bE1uRmRFcWYzTTU4Q2c1cXhvL2ltYWdlLnBuZw~~.png" alt="Executive template example"></td>
+            </tr>
+        </tbody>
     </table>
 
+    <h3 style="text-align: center; margin: 40px 0 20px;">🎥 Resume Writing Tips</h3>
     <iframe 
-        width="560" 
-        height="315"
+        width="700" 
+        height="400"
         src="https://www.youtube.com/embed/R3abknwWX7k"
-        title="Resume Tips"></iframe>
+        title="Resume Tips Video"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen></iframe>
 </section>
 
 <!-- CONTACT -->
 <section id="contact" class="content-section">
-    <h2>Contact Us</h2>
+    <h2>📞 Contact Us</h2>
     
     <section class="contact-section">
     
     <div class="contact-form">
-        <form>
+        <form onsubmit="event.preventDefault(); alert('✅ Thank you! Your message has been received.'); this.reset();">
 
-            <label for="name">Name</label>
-            <input type="text" id="name" name="name" placeholder="Enter your name" required>
+            <label for="contact-name">Name *</label>
+            <input type="text" id="contact-name" name="name" placeholder="Enter your name" required>
 
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" placeholder="example@gmail.com" required>
+            <label for="contact-email">Email *</label>
+            <input type="email" id="contact-email" name="email" placeholder="example@gmail.com" required>
 
-            <label for="subject">Subject</label>
-            <input type="text" id="subject" name="subject" placeholder="Enter you subject" required>
+            <label for="subject">Subject *</label>
+            <input type="text" id="subject" name="subject" placeholder="Enter your subject" required>
 
-            <label for="message">Message</label>
+            <label for="message">Message *</label>
             <textarea id="message" name="message" placeholder="Enter question or any enquiry" required></textarea>
 
-            <input type="submit" value="SUBMIT">
+            <input type="submit" value="SEND MESSAGE">
 
         </form>
     </div>
 
     <div class="contact-info">
-        <h3>Contact Information</h3>
-        <p>Email: <a href="mailto:support@profileplus.com">support@profileplus.com</a></p>
-        <p>Phone: <a href="tel:+60123456789">+60 12-345 6789</a></p>
+        <h3>📬 Contact Information</h3>
+        <p>📧 Email: <a href="mailto:support@profileplus.com">support@profileplus.com</a></p>
+        <p>📱 Phone: <a href="tel:+60123456789">+60 12-345 6789</a></p>
+        <p style="margin-top: 30px;">
+            <strong>⏰ Business Hours:</strong><br>
+            Monday - Friday: 9:00 AM - 6:00 PM<br>
+            Saturday: 10:00 AM - 4:00 PM<br>
+            Sunday: Closed
+        </p>
     </div>
 
+</section>
 </section>
 
 </main>
 
+<!-- Scroll to top button -->
+<button class="scroll-top" onclick="scrollToTop()" aria-label="Scroll to top">↑</button>
+
 <footer>
-    <p>&copy; 2026 Profile+. All rights reserved.</p>
+    <p>&copy; 2026 Profile+. All rights reserved. | Empowering job seekers worldwide 🌍</p>
 </footer>
 
 <script src="script.js"></script>
